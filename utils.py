@@ -48,7 +48,7 @@ name_label_dict = {
 #train_names = sorted({f[:36] for f in os.listdir(TRAIN)})
 
 #tr_n, val_n = train_test_split(train_names, test_size=0.2, random_state=2050)
-def fill_targets(row):
+def convert_targets(row):
   row.Target = [int(i) for i in row.Target.split(" ")]
   row.Target = np.eye(28)[row.Target].sum(axis=0)
   return row
@@ -56,7 +56,7 @@ def fill_targets(row):
 
 def get_split(test_size=0.2):
   data = pd.read_csv(LABELS)
-  data = data.apply(fill_targets, axis=1)
+  data = data.apply(convert_targets, axis=1)
   k_fold = IterativeStratification(n_splits=2, order=2,sample_distribution_per_fold=[test_size, 1.0-test_size])
   train_names=list(data['Id'])
   y=data['Target'].values
