@@ -27,4 +27,5 @@ This project is code of Human Protein Atlas Image Classification competition<br>
         optimizer.step()        # update parameters of net
         optimizer.zero_grad()   # reset gradient
  ```
+ * **we trained our model only in train data,no external data nor leaked data.** External data can boost about 0.1 in lb.However,someone in competition's discussion claimed that he could achieve 0.6 without external data,so we didn't take external data into consideration.<br>
  * our final result ends with public lb 0.474,private lb 0.443,wihch is obvious not good.Because this is our first competition,we do not konw lots of techniques useful in such competition.We still have a long way to go. 
