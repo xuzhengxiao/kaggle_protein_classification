@@ -7,7 +7,7 @@ This project is code of Human Protein Atlas Image Classification competition<br>
 * [predict.py](https://github.com/xuzhengxiao/sgdr_rgb/blob/master/predict.py) predicts test data
 
 ## Some appcoaches taken 
-*learning rate schedule* is warm restarts,which described in [SGDR: Stochastic Gradient Descent with Warm Restarts](https://arxiv.org/abs/1608.03983).<br>
+*learning rate schedule* is warm restarts,which is described in [SGDR: Stochastic Gradient Descent with Warm Restarts](https://arxiv.org/abs/1608.03983).<br>
 *bce loss* combined with *log-dampned weight* works better.<br>
 
  ## Attention
