@@ -99,7 +99,7 @@ def get_train(tr_n):
 
 
 
-def open_rgby(path, filename,train=True,stats=None):
+def open_rgby( path, filename,train=True,stats=None):
   """ a function that reads RGBY image """
   #colors = ['red', 'green', 'blue', 'yellow']
   colors = ['red', 'green', 'blue']
