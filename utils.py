@@ -104,9 +104,9 @@ def open_rgby(path, filename,train=True,stats=None):
   #colors = ['red', 'green', 'blue', 'yellow']
   colors = ['red', 'green', 'blue']
   flags = cv2.IMREAD_GRAYSCALE
-  img = [cv2.imread(os.path.join(path, filename + '_' + color + '.png'), flags).astype(np.float32) / 255
+  img = [cv2.imread(os.path.join(path, filename + '_' + color + '.png'), flags).astype(np.float32)
          for color in colors]
-  img=[cv2.resize(x,(512,512)) for x in img]
+  img=[cv2.resize(x,(512,512))/255 for x in img]
   img=np.stack(img, axis=-1)
   ##### do not normalize
   stats=None
